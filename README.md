@@ -25,6 +25,26 @@ A Home Assistant custom integration that exposes a service to read values from
 
 ---
 
+## Installation
+
+### HACS (recommended)
+
+[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Big-Gremlin&repository=ha-secret-reader&category=integration)
+
+1. HACS → Integrations → ⋮ → *Custom repositories*
+2. Add the repository URL, category *Integration*
+3. Install *Secret Reader* and restart Home Assistant
+
+### Manual
+
+Copy `custom_components/secret_reader/` into the `config/custom_components/` folder of your Home Assistant instance and restart HA.
+
+## Setup
+
+*Settings* → *Devices & Services* → *Add integration* → **Secret Reader**. Select allowed users via *Configure* (options).
+
 ## How it works
 
 - The integration registers the `secret_reader.read` service.
@@ -59,26 +79,6 @@ Example in an automation:
 
 The service throws an error if `secrets.yaml` does not exist, the key is not found,
 or the calling user is not on the allowlist.
-
-## Installation
-
-### HACS (recommended)
-
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
-
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=Big-Gremlin&repository=ha-secret-reader&category=integration)
-
-1. HACS → Integrations → ⋮ → *Custom repositories*
-2. Add the repository URL, category *Integration*
-3. Install *Secret Reader* and restart Home Assistant
-
-### Manual
-
-Copy `custom_components/secret_reader/` into the `config/custom_components/` folder of your Home Assistant instance and restart HA.
-
-## Setup
-
-*Settings* → *Devices & Services* → *Add integration* → **Secret Reader**. Select allowed users via *Configure* (options).
 
 ## Development
 
