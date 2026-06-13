@@ -1,0 +1,14 @@
+read:
+  name: HA-Secret lesen
+  description: >-
+    Liest einen Wert aus der secrets.yaml von Home Assistant.
+    Nur autorisierte User erhalten ein Ergebnis; System-/Automatisierungs-Aufrufe
+    (kein User-Kontext) sind immer erlaubt.
+  fields:
+    name:
+      name: Name
+      description: Der Schlüssel, wie er in der secrets.yaml steht.
+      required: true
+      example: my_api_key
+      selector:
+        text:

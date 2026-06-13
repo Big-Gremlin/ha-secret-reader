@@ -1,0 +1,14 @@
+{
+  "domain": "secret_reader",
+  "name": "Secret Reader",
+  "version": "1.0.0",
+  "codeowners": [],
+  "config_flow": true,
+  "single_config_entry": true,
+  "dependencies": [],
+  "documentation": "https://github.com/Big-Gremlin/ha-secret-reader",
+  "integration_type": "service",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/Big-Gremlin/ha-secret-reader/issues",
+  "requirements": []
+}

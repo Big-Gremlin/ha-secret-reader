@@ -1,0 +1,38 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Secret Reader",
+        "description": "Sets up the integration. Authorized users are configured in the options afterwards."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Secret Reader is already set up."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Authorized users",
+        "data": {
+          "allowed_users": "Allowed users"
+        },
+        "data_description": {
+          "allowed_users": "Only these users may call the service interactively. Leave empty to allow all users. Automations (no user context) are always allowed."
+        }
+      }
+    }
+  },
+  "services": {
+    "read": {
+      "name": "Read HA secret",
+      "description": "Reads a value from Home Assistant's secrets.yaml.",
+      "fields": {
+        "name": {
+          "name": "Name",
+          "description": "The key as it appears in secrets.yaml."
+        }
+      }
+    }
+  }
+}
